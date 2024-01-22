@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqk1pnyglr632"]
+[gd_scene load_steps=4 format=3 uid="uid://dqk1pnyglr632"]
 
 [ext_resource type="Texture2D" uid="uid://sk0ai27a51o4" path="res://assets/vintage-circus-background-for-a-poster.png" id="1_7sqhe"]
 [ext_resource type="PackedScene" uid="uid://b588fenf8ax6" path="res://player.tscn" id="1_8t4je"]
+[ext_resource type="PackedScene" uid="uid://cpuph4nwsbw1h" path="res://obstacle.tscn" id="3_1rbtv"]
 
 [node name="Game" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1480.0
@@ -14,3 +16,12 @@ texture = ExtResource("1_7sqhe")
 
 [node name="Player" parent="." instance=ExtResource("1_8t4je")]
 position = Vector2(611, 301)
+
+[node name="Obstacle" parent="." instance=ExtResource("3_1rbtv")]
+position = Vector2(1233, 713)
+
+[node name="Obstacle2" parent="." instance=ExtResource("3_1rbtv")]
+position = Vector2(133, 628)
+
+[node name="Obstacle3" parent="." instance=ExtResource("3_1rbtv")]
+position = Vector2(1290, 169)

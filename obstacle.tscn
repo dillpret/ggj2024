@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://cpuph4nwsbw1h"]
+[gd_scene load_steps=3 format=3 uid="uid://cpuph4nwsbw1h"]
+
+[ext_resource type="Texture2D" uid="uid://dcdorme33w4ty" path="res://assets/barrel.png" id="1_xlnir"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7rsy"]
+radius = 26.0192
 
 [node name="Obstacle" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0323625, 0.0323624)
+texture = ExtResource("1_xlnir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 16)
+shape = SubResource("CircleShape2D_y7rsy")
