@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqk1pnyglr632"]
+[gd_scene load_steps=3 format=3 uid="uid://dqk1pnyglr632"]
 
+[ext_resource type="Texture2D" uid="uid://sk0ai27a51o4" path="res://assets/vintage-circus-background-for-a-poster.png" id="1_7sqhe"]
 [ext_resource type="PackedScene" uid="uid://b588fenf8ax6" path="res://player.tscn" id="1_8t4je"]
 
 [node name="Game" type="Node2D"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1480.0
+offset_bottom = 837.0
+texture = ExtResource("1_7sqhe")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("1_8t4je")]
+position = Vector2(611, 301)
