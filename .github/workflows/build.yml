@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
-      - chore/builds
+  pull_request:
+    branches:
+      - main
 
 env:
   NAME: GGJ2024
   SHORTNAME: ggj2024
-
 
 jobs:
   build:
@@ -26,7 +27,7 @@ jobs:
         with:
           name: ${{ env.SHORTNAME }}
           preset: ${{ matrix.platform }}
-          debugMode: "true"
+          debugMode: ${{ github.event_name == 'pull_request' }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
