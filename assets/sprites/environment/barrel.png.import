@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb3hwawnkskuo"
-path="res://.godot/imported/pie-clipart-md.png-5ed166c02779832a475d037faa50a9c5.ctex"
+uid="uid://dcdorme33w4ty"
+path="res://.godot/imported/barrel.png-51f64c498726fcf51fd1927b65775fda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pie-clipart-md.png"
-dest_files=["res://.godot/imported/pie-clipart-md.png-5ed166c02779832a475d037faa50a9c5.ctex"]
+source_file="res://assets/sprites/environment/barrel.png"
+dest_files=["res://.godot/imported/barrel.png-51f64c498726fcf51fd1927b65775fda.ctex"]
 
 [params]
 

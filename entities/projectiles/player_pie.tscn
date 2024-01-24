@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfqpkyk56s2dt"]
 
-[ext_resource type="Texture2D" uid="uid://cb3hwawnkskuo" path="res://assets/pie-clipart-md.png" id="1_l8qpu"]
-[ext_resource type="Script" path="res://player_pie.gd" id="1_rahj8"]
+[ext_resource type="Texture2D" uid="uid://cb3hwawnkskuo" path="res://assets/sprites/projectiles/pie-clipart-md.png" id="1_l8qpu"]
+[ext_resource type="Script" path="res://entities/projectiles/player_pie.gd" id="1_rahj8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4alw2"]
 
