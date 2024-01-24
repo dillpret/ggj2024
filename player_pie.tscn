@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_4alw2"]
 
 [node name="PlayerPie" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_rahj8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

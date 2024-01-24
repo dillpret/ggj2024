@@ -1,3 +1,4 @@
 [gd_scene format=3 uid="uid://dwy3ddk1xgn6a"]
 
 [node name="EnemyPie" type="Area2D"]
+collision_mask = 2
