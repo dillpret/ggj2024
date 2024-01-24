@@ -10,14 +10,20 @@ on:
 
 env:
   NAME: GGJ2024
-  SHORTNAME: ggj2024
+  EXENAME: ggj2024
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        platform: [linux, windows, mac]
+        platform:
+          - preset: windows
+            fileext: .exe
+          - preset: mac
+            fileext: .zip
+          - preset: linux
+            fileext: ""
 
     steps:
       - uses: actions/checkout@v3
@@ -25,8 +31,8 @@ jobs:
         id: build
         uses: manleydev/build-godot-action@v1.5.0
         with:
-          name: ${{ env.SHORTNAME }}
-          preset: ${{ matrix.platform }}
+          name: ${{ env.EXENAME }}${{ matrix.platform.fileext }}
+          preset: ${{ matrix.platform.preset }}
           debugMode: ${{ github.event_name == 'pull_request' }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
