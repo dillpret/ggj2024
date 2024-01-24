@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcdorme33w4ty"
-path="res://.godot/imported/barrel.png-d7558aef31a8f4899a7ffc3a3f2685b7.ctex"
+uid="uid://sk0ai27a51o4"
+path="res://.godot/imported/vintage-circus-background-for-a-poster.png-a8d38f204f97a8beb4226e62615a1fb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/barrel.png"
-dest_files=["res://.godot/imported/barrel.png-d7558aef31a8f4899a7ffc3a3f2685b7.ctex"]
+source_file="res://assets/sprites/environment/vintage-circus-background-for-a-poster.png"
+dest_files=["res://.godot/imported/vintage-circus-background-for-a-poster.png-a8d38f204f97a8beb4226e62615a1fb9.ctex"]
 
 [params]
 

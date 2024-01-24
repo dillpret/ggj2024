@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qcqa640ad6rk"
-path="res://.godot/imported/33-332282_clown-free-to-use-clipart-clown.png-751dbce0a3c26bd379f97543c4b968e5.ctex"
+uid="uid://cb3hwawnkskuo"
+path="res://.godot/imported/pie-clipart-md.png-1b26bfb8bacc34e19752b471256112a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/33-332282_clown-free-to-use-clipart-clown.png"
-dest_files=["res://.godot/imported/33-332282_clown-free-to-use-clipart-clown.png-751dbce0a3c26bd379f97543c4b968e5.ctex"]
+source_file="res://assets/sprites/projectiles/pie-clipart-md.png"
+dest_files=["res://.godot/imported/pie-clipart-md.png-1b26bfb8bacc34e19752b471256112a0.ctex"]
 
 [params]
 

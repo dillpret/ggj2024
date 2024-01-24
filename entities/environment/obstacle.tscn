@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpuph4nwsbw1h"]
 
-[ext_resource type="Texture2D" uid="uid://dcdorme33w4ty" path="res://assets/barrel.png" id="1_xlnir"]
+[ext_resource type="Texture2D" uid="uid://dcdorme33w4ty" path="res://assets/sprites/environment/barrel.png" id="1_xlnir"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7rsy"]
 radius = 26.0192

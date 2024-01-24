@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sk0ai27a51o4"
-path="res://.godot/imported/vintage-circus-background-for-a-poster.png-03c198c1e44d3cd3fcbf812af593011d.ctex"
+uid="uid://qcqa640ad6rk"
+path="res://.godot/imported/33-332282_clown-free-to-use-clipart-clown.png-c97d32f18cc4c36641e77bf40a1e64a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vintage-circus-background-for-a-poster.png"
-dest_files=["res://.godot/imported/vintage-circus-background-for-a-poster.png-03c198c1e44d3cd3fcbf812af593011d.ctex"]
+source_file="res://assets/sprites/player/33-332282_clown-free-to-use-clipart-clown.png"
+dest_files=["res://.godot/imported/33-332282_clown-free-to-use-clipart-clown.png-c97d32f18cc4c36641e77bf40a1e64a0.ctex"]
 
 [params]
 
