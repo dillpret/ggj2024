@@ -1,9 +1,8 @@
 extends Area2D
 
-const SPEED = 1000
 const RANGE = 1200
 
-@export var velocity = 1000
+@export var velocity: Vector2
 
 var travelled_distance = 0
 var initial_position: Vector2
