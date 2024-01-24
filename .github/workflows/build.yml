@@ -1,0 +1,44 @@
+name: Build Godot Project
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  NAME: GGJ2024
+  EXENAME: ggj2024
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform:
+          - preset: windows
+            fileext: .exe
+            name: Windows
+          - preset: mac
+            fileext: .zip
+            name: MacOS
+          - preset: linux
+            fileext: ""
+            name: Linux
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        id: build
+        uses: manleydev/build-godot-action@v1.5.0
+        with:
+          name: ${{ env.EXENAME }}${{ matrix.platform.fileext }}
+          preset: ${{ matrix.platform.preset }}
+          debugMode: ${{ github.event_name == 'pull_request' }}
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.NAME }} - ${{ matrix.platform.name }}
+          path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
