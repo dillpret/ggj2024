@@ -20,10 +20,13 @@ jobs:
         platform:
           - preset: windows
             fileext: .exe
+            name: Windows
           - preset: mac
             fileext: .zip
+            name: MacOS
           - preset: linux
             fileext: ""
+            name: Linux
 
     steps:
       - uses: actions/checkout@v3
@@ -37,5 +40,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.NAME }} - ${{ matrix.platform }}
+          name: ${{ env.NAME }} - ${{ matrix.platform.name }}
           path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
