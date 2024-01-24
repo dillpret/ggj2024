@@ -20,5 +20,5 @@ func throw():
 	new_pie.velocity = rotation_vector.normalized() * throw_speed
 
 func _process(delta):
-	if Input.is_action_pressed("throw_pie"):
+	if Input.is_action_just_pressed("throw_pie"):
 		throw()
