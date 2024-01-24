@@ -1,0 +1,34 @@
+name: Build Godot Project
+
+on:
+  push:
+    branches:
+      - main
+      - chore/builds
+
+env:
+  NAME: GGJ2024
+  SHORTNAME: ggj2024
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [linux, windows, mac]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        id: build
+        uses: manleydev/build-godot-action@v1.5.0
+        with:
+          name: ${{ env.SHORTNAME }}
+          preset: ${{ matrix.platform }}
+          debugMode: "true"
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.NAME }} - ${{ matrix.platform }}
+          path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
