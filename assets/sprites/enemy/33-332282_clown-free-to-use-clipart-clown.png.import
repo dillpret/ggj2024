@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6pt5sc0awaow"
-path="res://.godot/imported/player.png-65b4e4a8f251ccdb19a5076e652a4f66.ctex"
+uid="uid://cfe64gwt27tqi"
+path="res://.godot/imported/33-332282_clown-free-to-use-clipart-clown.png-1da2513c2e6737b6563d6aba4da7bbf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/player.png"
-dest_files=["res://.godot/imported/player.png-65b4e4a8f251ccdb19a5076e652a4f66.ctex"]
+source_file="res://assets/sprites/enemy/33-332282_clown-free-to-use-clipart-clown.png"
+dest_files=["res://.godot/imported/33-332282_clown-free-to-use-clipart-clown.png-1da2513c2e6737b6563d6aba4da7bbf1.ctex"]
 
 [params]
 
