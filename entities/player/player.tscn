@@ -1,27 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://b588fenf8ax6"]
+[gd_scene load_steps=6 format=3 uid="uid://b588fenf8ax6"]
 
 [ext_resource type="Texture2D" uid="uid://qcqa640ad6rk" path="res://assets/sprites/player/33-332282_clown-free-to-use-clipart-clown.png" id="1_f61eb"]
 [ext_resource type="Script" path="res://entities/player/player.gd" id="1_gitli"]
 [ext_resource type="PackedScene" uid="uid://cfqpkyk56s2dt" path="res://entities/projectiles/player_pie.tscn" id="2_jti0q"]
+[ext_resource type="PackedScene" uid="uid://b0ajvyjpjnown" path="res://entities/player/player_visuals.tscn" id="3_gv8w5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0pctp"]
-radius = 20.025
+radius = 32.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_gitli")
 projectile = ExtResource("2_jti0q")
 
+[node name="PlayerVisuals" parent="." instance=ExtResource("3_gv8w5")]
+unique_name_in_owner = true
+scale = Vector2(0.388713, 0.388713)
+
 [node name="ThrowPoint" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(44, -12)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.134048, 0.134048)
 texture = ExtResource("1_f61eb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 37)
+position = Vector2(0, 39)
 shape = SubResource("CircleShape2D_0pctp")
 
 [node name="Camera2D" type="Camera2D" parent="."]

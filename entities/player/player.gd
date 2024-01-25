@@ -9,6 +9,11 @@ func _physics_process(delta):
 	velocity = direction * move_speed
 	move_and_slide()
 	
+	if velocity.length() > 0.0:
+		%PlayerVisuals.play_run_animation()
+	else:
+		%PlayerVisuals.play_idle_animation()
+	
 func get_pie_velocity() -> Vector2:
 	var mouse_pos = get_global_mouse_position()
 	var player_pos = global_position
