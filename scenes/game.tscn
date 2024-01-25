@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqk1pnyglr632"]
+[gd_scene load_steps=5 format=3 uid="uid://dqk1pnyglr632"]
 
 [ext_resource type="Texture2D" uid="uid://sk0ai27a51o4" path="res://assets/sprites/environment/vintage-circus-background-for-a-poster.png" id="1_7sqhe"]
 [ext_resource type="PackedScene" uid="uid://b588fenf8ax6" path="res://entities/player/player.tscn" id="1_8t4je"]
 [ext_resource type="PackedScene" uid="uid://cpuph4nwsbw1h" path="res://entities/environment/obstacle.tscn" id="3_1rbtv"]
+[ext_resource type="PackedScene" uid="uid://dlmarsxy32eac" path="res://entities/enemies/enemy.tscn" id="4_omsl3"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -25,3 +26,6 @@ position = Vector2(133, 628)
 
 [node name="Obstacle3" parent="." instance=ExtResource("3_1rbtv")]
 position = Vector2(1290, 169)
+
+[node name="Enemy" parent="." instance=ExtResource("4_omsl3")]
+position = Vector2(293, 528)

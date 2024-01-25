@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlmarsxy32eac"]
+[gd_scene load_steps=6 format=3 uid="uid://dlmarsxy32eac"]
 
 [ext_resource type="Script" path="res://entities/enemies/enemy.gd" id="1_ww14u"]
 [ext_resource type="Texture2D" uid="uid://cfe64gwt27tqi" path="res://assets/sprites/enemy/33-332282_clown-free-to-use-clipart-clown.png" id="1_xhr4b"]
+[ext_resource type="PackedScene" uid="uid://h6k5bfdxxujx" path="res://entities/enemies/enemy_visuals.tscn" id="2_bxlc0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehv7d"]
 radius = 20.025
@@ -13,20 +14,27 @@ radius = 178.0
 collision_mask = 2
 script = ExtResource("1_ww14u")
 
+[node name="EnemyVisuals" parent="." instance=ExtResource("2_bxlc0")]
+unique_name_in_owner = true
+scale = Vector2(0.389, 0.389)
+
 [node name="ThrowPoint" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(44, -12)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.134, 0.134)
 texture = ExtResource("1_xhr4b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 37)
+position = Vector2(0, 35)
+scale = Vector2(1.60213, 1.60507)
 shape = SubResource("CircleShape2D_ehv7d")
 
 [node name="ThrowingArea" type="Area2D" parent="."]
 unique_name_in_owner = true
+scale = Vector2(-2.87851, -2.87851)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ThrowingArea"]
