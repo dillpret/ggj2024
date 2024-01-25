@@ -1,4 +1,33 @@
-[gd_scene format=3 uid="uid://dlmarsxy32eac"]
+[gd_scene load_steps=5 format=3 uid="uid://dlmarsxy32eac"]
+
+[ext_resource type="Script" path="res://entities/enemies/enemy.gd" id="1_ww14u"]
+[ext_resource type="Texture2D" uid="uid://cfe64gwt27tqi" path="res://assets/sprites/enemy/33-332282_clown-free-to-use-clipart-clown.png" id="1_xhr4b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehv7d"]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cmyx1"]
+radius = 178.0
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_mask = 2
+script = ExtResource("1_ww14u")
+
+[node name="ThrowPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(44, -12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.134, 0.134)
+texture = ExtResource("1_xhr4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 37)
+shape = SubResource("CircleShape2D_ehv7d")
+
+[node name="ThrowingArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThrowingArea"]
+shape = SubResource("CircleShape2D_cmyx1")
