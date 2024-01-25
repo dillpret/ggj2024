@@ -1,15 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfqpkyk56s2dt"]
 
 [ext_resource type="Texture2D" uid="uid://cb3hwawnkskuo" path="res://assets/sprites/projectiles/pie-clipart-md.png" id="1_l8qpu"]
-[ext_resource type="Script" path="res://entities/projectiles/player_pie.gd" id="1_rahj8"]
+[ext_resource type="Script" path="res://entities/projectiles/pie.gd" id="1_s82r2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4alw2"]
 
 [node name="PlayerPie" type="Area2D"]
 collision_layer = 2
-script = ExtResource("1_rahj8")
+script = ExtResource("1_s82r2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
 scale = Vector2(0.0606061, 0.0606061)
 texture = ExtResource("1_l8qpu")
 

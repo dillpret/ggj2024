@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlmarsxy32eac"]
+[gd_scene load_steps=7 format=3 uid="uid://b5bcaltfxogjd"]
 
 [ext_resource type="Script" path="res://entities/enemies/enemy.gd" id="1_ww14u"]
-[ext_resource type="Texture2D" uid="uid://cfe64gwt27tqi" path="res://assets/sprites/enemy/33-332282_clown-free-to-use-clipart-clown.png" id="1_xhr4b"]
-[ext_resource type="PackedScene" uid="uid://h6k5bfdxxujx" path="res://entities/enemies/enemy_visuals.tscn" id="2_bxlc0"]
+[ext_resource type="PackedScene" uid="uid://dwy3ddk1xgn6a" path="res://entities/projectiles/enemy_pie.tscn" id="2_51ydm"]
+[ext_resource type="PackedScene" uid="uid://h6k5bfdxxujx" path="res://entities/enemies/enemy_visuals.tscn" id="3_avvn2"]
+[ext_resource type="Texture2D" uid="uid://4bayly3et2yv" path="res://assets/sprites/enemies/enemy.png" id="3_tb88a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehv7d"]
 radius = 20.025
@@ -10,31 +11,33 @@ radius = 20.025
 [sub_resource type="CircleShape2D" id="CircleShape2D_cmyx1"]
 radius = 178.0
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("throw_point")]
 collision_mask = 2
 script = ExtResource("1_ww14u")
+move_speed = 300.0
+projectile = ExtResource("2_51ydm")
+throw_point = NodePath("ThrowPoint")
 
-[node name="EnemyVisuals" parent="." instance=ExtResource("2_bxlc0")]
+[node name="EnemyVisuals" parent="." instance=ExtResource("3_avvn2")]
 unique_name_in_owner = true
-scale = Vector2(0.389, 0.389)
+scale = Vector2(0.228018, 0.228018)
 
 [node name="ThrowPoint" type="Marker2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(44, -12)
+position = Vector2(0, 6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.134, 0.134)
-texture = ExtResource("1_xhr4b")
+texture = ExtResource("3_tb88a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 35)
-scale = Vector2(1.60213, 1.60507)
+position = Vector2(0, 21)
 shape = SubResource("CircleShape2D_ehv7d")
 
 [node name="ThrowingArea" type="Area2D" parent="."]
 unique_name_in_owner = true
-scale = Vector2(-2.87851, -2.87851)
+scale = Vector2(1.30636, 1.30636)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ThrowingArea"]
