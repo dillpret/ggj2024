@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://0ilbvu8r41or"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_o32yc"]
+[ext_resource type="Texture2D" uid="uid://bvclwywa3jphd" path="res://assets/sprites/menu/28718.jpg" id="2_sif3x"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o32yc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 40.0
+offset_right = 1515.0
+offset_bottom = 1063.0
+texture = ExtResource("2_sif3x")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.0
+offset_top = -275.0
+offset_right = 396.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.0509804, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Big Top Brawl"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Start"
+
+[node name="AboutButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "About"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer2/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]

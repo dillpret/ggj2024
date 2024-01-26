@@ -17,8 +17,6 @@ texture = ExtResource("1_7sqhe")
 
 [node name="Player" parent="." instance=ExtResource("1_8t4je")]
 position = Vector2(611, 301)
-throw_point = Object(Marker2D,"_import_path":NodePath(""),"unique_name_in_owner":true,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(44, -12),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"gizmo_extents":10.0,"script":null)
-
 
 [node name="Obstacle" parent="." instance=ExtResource("3_1rbtv")]
 position = Vector2(1233, 713)
