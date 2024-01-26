@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn8sy16pws6k6"]
+
+[ext_resource type="Script" path="res://entities/enemies/enemy_spawner.gd" id="1_8uad3"]
+[ext_resource type="PackedScene" uid="uid://b5bcaltfxogjd" path="res://entities/enemies/enemy.tscn" id="2_xjc23"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d27nh"]
+radius = 1053.24
+
+[node name="EnemySpawner" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_8uad3")
+enemy = ExtResource("2_xjc23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d27nh")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
