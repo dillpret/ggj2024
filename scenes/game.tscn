@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://sk0ai27a51o4" path="res://assets/sprites/environment/vintage-circus-background-for-a-poster.png" id="1_7sqhe"]
 [ext_resource type="PackedScene" uid="uid://bu4w45l7ahi1g" path="res://entities/player/player.tscn" id="1_8t4je"]
 [ext_resource type="PackedScene" uid="uid://cpuph4nwsbw1h" path="res://entities/environment/obstacle.tscn" id="3_1rbtv"]
-[ext_resource type="PackedScene" uid="uid://b5bcaltfxogjd" path="res://entities/enemies/enemy.tscn" id="4_pvn3a"]
+[ext_resource type="PackedScene" uid="uid://cn8sy16pws6k6" path="res://entities/enemies/enemy_spawner.tscn" id="5_nba2o"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -17,6 +17,8 @@ texture = ExtResource("1_7sqhe")
 
 [node name="Player" parent="." instance=ExtResource("1_8t4je")]
 position = Vector2(611, 301)
+throw_point = Object(Marker2D,"_import_path":NodePath(""),"unique_name_in_owner":true,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(44, -12),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"gizmo_extents":10.0,"script":null)
+
 
 [node name="Obstacle" parent="." instance=ExtResource("3_1rbtv")]
 position = Vector2(1233, 713)
@@ -27,5 +29,4 @@ position = Vector2(133, 628)
 [node name="Obstacle3" parent="." instance=ExtResource("3_1rbtv")]
 position = Vector2(1290, 169)
 
-[node name="Enemy" parent="." instance=ExtResource("4_pvn3a")]
-position = Vector2(1116, 142)
+[node name="EnemySpawner" parent="." instance=ExtResource("5_nba2o")]
