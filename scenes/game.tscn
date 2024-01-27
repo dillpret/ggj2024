@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqk1pnyglr632"]
+[gd_scene load_steps=7 format=3 uid="uid://dqk1pnyglr632"]
 
 [ext_resource type="PackedScene" uid="uid://bu4w45l7ahi1g" path="res://entities/player/player.tscn" id="1_8t4je"]
 [ext_resource type="PackedScene" uid="uid://vauaxc4ggwgd" path="res://entities/environment/ring.tscn" id="1_u4evq"]
 [ext_resource type="PackedScene" uid="uid://cpuph4nwsbw1h" path="res://entities/environment/obstacle.tscn" id="3_1rbtv"]
 [ext_resource type="PackedScene" uid="uid://cflfl1wfdqtys" path="res://entities/environment/pole.tscn" id="5_hjcgx"]
 [ext_resource type="PackedScene" uid="uid://cn8sy16pws6k6" path="res://entities/enemies/enemy_spawner.tscn" id="5_nba2o"]
+[ext_resource type="AudioStream" uid="uid://s1413a8bpgso" path="res://assets/audio/music/taratata-6264.mp3" id="6_hv086"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -56,3 +57,9 @@ scale = Vector2(2.08336, 3.16768)
 [node name="Pole5" parent="." instance=ExtResource("5_hjcgx")]
 position = Vector2(1047, 557)
 scale = Vector2(2.08336, 3.16768)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_hv086")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
