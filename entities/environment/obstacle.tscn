@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpuph4nwsbw1h"]
 
-[ext_resource type="Texture2D" uid="uid://dcdorme33w4ty" path="res://assets/sprites/environment/barrel.png" id="1_xlnir"]
+[ext_resource type="Texture2D" uid="uid://1a7ap8lh80yp" path="res://assets/sprites/environment/podium.png" id="1_63w4h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7rsy"]
 radius = 26.0192
@@ -8,9 +8,10 @@ radius = 26.0192
 [node name="Obstacle" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.0323625, 0.0323624)
-texture = ExtResource("1_xlnir")
+scale = Vector2(0.153527, 0.153526)
+texture = ExtResource("1_63w4h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 16)
+position = Vector2(1, 16)
+scale = Vector2(1, 0.550267)
 shape = SubResource("CircleShape2D_y7rsy")

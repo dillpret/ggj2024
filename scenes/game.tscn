@@ -1,17 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqk1pnyglr632"]
+[gd_scene load_steps=6 format=3 uid="uid://dqk1pnyglr632"]
 
-[ext_resource type="Texture2D" uid="uid://sk0ai27a51o4" path="res://assets/sprites/environment/vintage-circus-background-for-a-poster.png" id="1_7sqhe"]
 [ext_resource type="PackedScene" uid="uid://bu4w45l7ahi1g" path="res://entities/player/player.tscn" id="1_8t4je"]
+[ext_resource type="Texture2D" uid="uid://vdw3gkaskpa1" path="res://assets/sprites/environment/circus_ring.png" id="1_kanpw"]
 [ext_resource type="PackedScene" uid="uid://cpuph4nwsbw1h" path="res://entities/environment/obstacle.tscn" id="3_1rbtv"]
+[ext_resource type="PackedScene" uid="uid://cflfl1wfdqtys" path="res://entities/environment/pole.tscn" id="5_hjcgx"]
 [ext_resource type="PackedScene" uid="uid://cn8sy16pws6k6" path="res://entities/enemies/enemy_spawner.tscn" id="5_nba2o"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1480.0
-offset_bottom = 837.0
-texture = ExtResource("1_7sqhe")
+offset_left = -1951.0
+offset_top = -1114.0
+offset_right = 1889.0
+offset_bottom = 1046.0
+texture = ExtResource("1_kanpw")
+metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -19,12 +23,41 @@ texture = ExtResource("1_7sqhe")
 position = Vector2(611, 301)
 
 [node name="Obstacle" parent="." instance=ExtResource("3_1rbtv")]
-position = Vector2(1233, 713)
+position = Vector2(-677, 241)
+scale = Vector2(2.33166, 2.60879)
 
 [node name="Obstacle2" parent="." instance=ExtResource("3_1rbtv")]
-position = Vector2(133, 628)
+position = Vector2(-479, -245)
+scale = Vector2(2.33166, 2.60879)
 
 [node name="Obstacle3" parent="." instance=ExtResource("3_1rbtv")]
-position = Vector2(1290, 169)
+position = Vector2(163, 486)
+scale = Vector2(2.33166, 2.60879)
+
+[node name="Obstacle4" parent="." instance=ExtResource("3_1rbtv")]
+position = Vector2(475, -403)
+scale = Vector2(2.33166, 2.60879)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("5_nba2o")]
+position = Vector2(-7, 24)
+scale = Vector2(1.35842, 0.782575)
+
+[node name="Pole" parent="." instance=ExtResource("5_hjcgx")]
+position = Vector2(-2, -12)
+scale = Vector2(2.08336, 3.16768)
+
+[node name="Pole2" parent="." instance=ExtResource("5_hjcgx")]
+position = Vector2(-1057, 570)
+scale = Vector2(2.08336, 3.16768)
+
+[node name="Pole3" parent="." instance=ExtResource("5_hjcgx")]
+position = Vector2(-1008, -519)
+scale = Vector2(2.08336, 3.16768)
+
+[node name="Pole4" parent="." instance=ExtResource("5_hjcgx")]
+position = Vector2(924, -565)
+scale = Vector2(2.08336, 3.16768)
+
+[node name="Pole5" parent="." instance=ExtResource("5_hjcgx")]
+position = Vector2(1047, 557)
+scale = Vector2(2.08336, 3.16768)

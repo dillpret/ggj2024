@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cflfl1wfdqtys"]
+
+[ext_resource type="Texture2D" uid="uid://dlakk4klcihdt" path="res://assets/sprites/environment/pole.png" id="1_qvbma"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7rsy"]
+radius = 26.0192
+
+[node name="Pole" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -143)
+scale = Vector2(0.153527, 0.153526)
+texture = ExtResource("1_qvbma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.467449, 0.372876)
+shape = SubResource("CircleShape2D_y7rsy")

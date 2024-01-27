@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://h6k5bfdxxujx"]
 
 [ext_resource type="Script" path="res://entities/player/player_visuals.gd" id="1_7lmv7"]
-[ext_resource type="Texture2D" uid="uid://4bayly3et2yv" path="res://assets/sprites/enemies/enemy.png" id="2_eb4hi"]
+[ext_resource type="Texture2D" uid="uid://dedrxk5fs2nbe" path="res://assets/sprites/enemies/enemy.png" id="2_eb4hi"]
 
 [sub_resource type="Animation" id="Animation_wj3bp"]
 length = 0.001
