@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfqpkyk56s2dt"]
 
-[ext_resource type="Texture2D" uid="uid://cb3hwawnkskuo" path="res://assets/sprites/projectiles/pie-clipart-md.png" id="1_l8qpu"]
 [ext_resource type="Script" path="res://entities/projectiles/pie.gd" id="1_s82r2"]
+[ext_resource type="Texture2D" uid="uid://d3rmkjx0kk0tg" path="res://assets/sprites/projectiles/pie.png" id="2_301jy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4alw2"]
 
@@ -11,8 +11,8 @@ script = ExtResource("1_s82r2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
-scale = Vector2(0.0606061, 0.0606061)
-texture = ExtResource("1_l8qpu")
+scale = Vector2(0.166751, 0.166751)
+texture = ExtResource("2_301jy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4alw2")
