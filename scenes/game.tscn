@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqk1pnyglr632"]
+[gd_scene load_steps=7 format=3 uid="uid://dqk1pnyglr632"]
 
 [ext_resource type="PackedScene" uid="uid://bu4w45l7ahi1g" path="res://entities/player/player.tscn" id="1_8t4je"]
 [ext_resource type="Texture2D" uid="uid://vdw3gkaskpa1" path="res://assets/sprites/environment/circus_ring.png" id="1_kanpw"]
+[ext_resource type="PackedScene" uid="uid://vauaxc4ggwgd" path="res://entities/environment/ring.tscn" id="1_u4evq"]
 [ext_resource type="PackedScene" uid="uid://cpuph4nwsbw1h" path="res://entities/environment/obstacle.tscn" id="3_1rbtv"]
 [ext_resource type="PackedScene" uid="uid://cflfl1wfdqtys" path="res://entities/environment/pole.tscn" id="5_hjcgx"]
 [ext_resource type="PackedScene" uid="uid://cn8sy16pws6k6" path="res://entities/enemies/enemy_spawner.tscn" id="5_nba2o"]
@@ -9,13 +10,16 @@
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 
+[node name="Ring" parent="." instance=ExtResource("1_u4evq")]
+position = Vector2(-1946, -1132)
+
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_left = -1951.0
 offset_top = -1114.0
 offset_right = 1889.0
 offset_bottom = 1046.0
 texture = ExtResource("1_kanpw")
-metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -40,7 +44,7 @@ scale = Vector2(2.33166, 2.60879)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("5_nba2o")]
 position = Vector2(-7, 24)
-scale = Vector2(1.35842, 0.782575)
+scale = Vector2(1.19882, 0.690632)
 
 [node name="Pole" parent="." instance=ExtResource("5_hjcgx")]
 position = Vector2(-2, -12)

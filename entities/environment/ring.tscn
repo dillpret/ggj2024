@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://vauaxc4ggwgd"]
+
+[ext_resource type="Texture2D" uid="uid://vdw3gkaskpa1" path="res://assets/sprites/environment/circus_ring.png" id="1_ndckt"]
+
+[node name="Ring" type="StaticBody2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ndckt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(492, 1142, 533, 959, 616, 826, 735, 700, 925, 560, 1140, 458, 1400, 380, 1700, 329, 2032, 318, 2391, 360, 2674, 432, 2964, 571, 3131, 686, 3258, 816, 3353, 985, 3383, 1151, 3364, 1291, 3301, 1430, 3162, 1598, 2934, 1763, 2673, 1876, 2356, 1957, 2053, 1987, 1735, 1984, 1428, 1932, 1116, 1837, 872, 1714, 696, 1571, 560, 1396, 502, 1245, 492, 1143, -1115, 1142, -1174, 3507, 5302, 3495, 5254, -1233, -1186, -1293, -1115, 1141)

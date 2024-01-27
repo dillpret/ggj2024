@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://1a7ap8lh80yp" path="res://assets/sprites/environment/podium.png" id="1_63w4h"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y7rsy"]
-radius = 26.0192
+[sub_resource type="CircleShape2D" id="CircleShape2D_fsedr"]
+radius = 24.0687
 
 [node name="Obstacle" type="StaticBody2D"]
 
@@ -14,4 +14,4 @@ texture = ExtResource("1_63w4h")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 16)
 scale = Vector2(1, 0.550267)
-shape = SubResource("CircleShape2D_y7rsy")
+shape = SubResource("CircleShape2D_fsedr")

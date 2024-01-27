@@ -3,20 +3,27 @@
 [ext_resource type="Script" path="res://entities/enemies/enemy_spawner.gd" id="1_8uad3"]
 [ext_resource type="PackedScene" uid="uid://b5bcaltfxogjd" path="res://entities/enemies/enemy.tscn" id="2_xjc23"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_d27nh"]
-radius = 1053.24
+[sub_resource type="Curve2D" id="Curve2D_kimp3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -4, -1057, 0, 0, 0, 0, 272, -1021, 0, 0, 0, 0, 528, -908, 0, 0, 0, 0, 747, -743, 0, 0, 0, 0, 911, -528, 0, 0, 0, 0, 1015, -270, 0, 0, 0, 0, 1054, 0, 0, 0, 0, 0, 1017, 273, 0, 0, 0, 0, 917, 530, 0, 0, 0, 0, 748, 745, 0, 0, 0, 0, 530, 910, 0, 0, 0, 0, 277, 1016, 0, 0, 0, 0, 0, 1054, 0, 0, 0, 0, -272, 1020, 0, 0, 0, 0, -527, 915, 0, 0, 0, 0, -746, 745, 0, 0, 0, 0, -910, 530, 0, 0, 0, 0, -1021, 274, 0, 0, 0, 0, -1055, 0, 0, 0, 0, 0, -1017, -273, 0, 0, 0, 0, -914, -531, 0, 0, 0, 0, -747, -745, 0, 0, 0, 0, -532, -908, 0, 0, 0, 0, -275, -1019, 0, 0, 0, 0, -4, -1057)
+}
+point_count = 25
 
-[node name="EnemySpawner" type="Area2D"]
-collision_layer = 0
-collision_mask = 0
+[node name="EnemySpawner" type="Node2D"]
+position = Vector2(0, -4)
 script = ExtResource("1_8uad3")
 enemy = ExtResource("2_xjc23")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_d27nh")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_kimp3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(-4, -1057)
+rotation = 0.129703
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
