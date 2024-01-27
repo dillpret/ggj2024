@@ -2,8 +2,9 @@ class_name CharacterBase
 
 extends CharacterBody2D
 
-@export_group("Movement")
+@export_group("Statistics")
 @export var move_speed: float = 600
+@export var health: float
 
 @export_group("Pie Throwing")
 @export var throw_speed: float = 1000
@@ -28,10 +29,15 @@ func throw_at(target: Vector2):
 	new_pie.velocity = get_pie_velocity_to_target(target)
 	new_pie.look_at(target)
 	current_throw_cooldown = throw_cooldown
+	
+	
+func take_hit(damage: float):
+	health -= damage
+	print(health)
 
 func _process(delta):
 	if current_throw_cooldown > 0:
 		current_throw_cooldown -= delta
 
 func can_throw() -> bool:
-	return current_throw_cooldown <= 0
+	return health > 0 and current_throw_cooldown <= 0

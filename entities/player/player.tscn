@@ -11,6 +11,7 @@ radius = 20.025
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("throw_point")]
 collision_layer = 2
 script = ExtResource("1_gitli")
+health = 100.0
 projectile = ExtResource("2_jti0q")
 throw_point = NodePath("ThrowPoint")
 

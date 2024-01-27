@@ -12,7 +12,7 @@ func _is_player_in_range() -> bool:
 
 
 func _physics_process(_delta):
-	if not _is_player_in_range():
+	if not _is_player_in_range() and health > 0:
 		var direction = global_position.direction_to(player.global_position)
 		velocity = direction * move_speed
 		move_and_slide()
@@ -21,6 +21,8 @@ func _physics_process(_delta):
 
 func _process(_delta):
 	super._process(_delta)
-	if _is_player_in_range():
+	if health <= 0:
+		%EnemyVisuals.play_fall_down_animation()
+	elif _is_player_in_range():
 		throw_at(_get_player_position())
 		%EnemyVisuals.play_idle_animation()

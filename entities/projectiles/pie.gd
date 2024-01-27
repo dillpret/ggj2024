@@ -3,6 +3,7 @@ extends Area2D
 const RANGE = 1200
 
 @export var velocity: Vector2
+@export var damage: float = 10
 
 var initial_position: Vector2
 
@@ -17,7 +18,7 @@ func _init():
 
 func _on_body_entered(body):
 	if body.has_method("take_hit"):
-		body.take_hit()
+		body.take_hit(damage)
 
 	queue_free()
 
