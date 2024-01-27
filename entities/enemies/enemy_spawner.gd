@@ -9,9 +9,9 @@ func spawn_enemy():
 	var degrees = randf_range(0, 360)
 	var position_on_circle = Vector2(radius * cos(deg_to_rad(degrees)), radius * sin(deg_to_rad(degrees)))
 	
-	add_child(new_enemy)
+	add_sibling(new_enemy)
 	
-	new_enemy.owner = self
+	new_enemy.owner = get_parent()
 	new_enemy.global_position = position_on_circle
 
 func _on_timer_timeout():
