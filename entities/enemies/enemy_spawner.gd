@@ -11,8 +11,8 @@ func spawn_enemy():
 	
 	add_child(new_enemy)
 	
+	new_enemy.owner = self
 	new_enemy.global_position = position_on_circle
-
 
 func _on_timer_timeout():
 	spawn_enemy()
