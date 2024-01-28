@@ -3,7 +3,8 @@
 [ext_resource type="Script" path="res://entities/projectiles/pie.gd" id="1_s82r2"]
 [ext_resource type="Texture2D" uid="uid://d3rmkjx0kk0tg" path="res://assets/sprites/projectiles/pie.png" id="2_301jy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4alw2"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vquyd"]
+height = 48.0
 
 [node name="PlayerPie" type="Area2D"]
 collision_layer = 2
@@ -15,6 +16,6 @@ scale = Vector2(0.166751, 0.166751)
 texture = ExtResource("2_301jy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_4alw2")
+shape = SubResource("CapsuleShape2D_vquyd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

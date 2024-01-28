@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dedrxk5fs2nbe" path="res://assets/sprites/enemies/enemy.png" id="3_tb88a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehv7d"]
-radius = 20.025
+radius = 30.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cmyx1"]
 radius = 178.0
@@ -33,7 +33,7 @@ scale = Vector2(0.134, 0.134)
 texture = ExtResource("3_tb88a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 21)
+position = Vector2(0, 5.005)
 shape = SubResource("CircleShape2D_ehv7d")
 
 [node name="ThrowingArea" type="Area2D" parent="."]
