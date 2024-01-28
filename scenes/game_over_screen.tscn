@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://6ftxbilt48tx"]
+
+[ext_resource type="Theme" uid="uid://dkjbjimguxqf5" path="res://assets/themes/buttons.tres" id="1_lk5o3"]
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_r4f1c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1e0f"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_r4f1c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.490196)
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -447.0
+offset_top = -290.0
+offset_right = 447.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1e0f")
+
+[node name="Label" type="Label" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -315.0
+offset_top = 45.0
+offset_right = 315.0
+offset_bottom = 210.0
+grow_horizontal = 2
+theme = ExtResource("1_lk5o3")
+text = "Game over"
+
+[node name="ReplayButton" type="Button" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -12.0
+offset_right = 193.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lk5o3")
+text = "Replay"
+
+[node name="QuitButton" type="Button" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = 128.0
+offset_right = 193.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lk5o3")
+text = "Quit"
+
+[connection signal="pressed" from="ColorRect/Panel/ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="ColorRect/Panel/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqk1pnyglr632"]
+[gd_scene load_steps=10 format=3 uid="uid://dqk1pnyglr632"]
 
 [ext_resource type="PackedScene" uid="uid://bu4w45l7ahi1g" path="res://entities/player/player.tscn" id="1_8t4je"]
-[ext_resource type="PackedScene" uid="uid://vauaxc4ggwgd" path="res://entities/environment/ring.tscn" id="1_u4evq"]
+[ext_resource type="PackedScene" path="res://entities/environment/ring.tscn" id="1_u4evq"]
 [ext_resource type="Script" path="res://entities/player/player_hud.gd" id="2_h3vyk"]
 [ext_resource type="PackedScene" uid="uid://cpuph4nwsbw1h" path="res://entities/environment/obstacle.tscn" id="3_1rbtv"]
-[ext_resource type="PackedScene" uid="uid://cflfl1wfdqtys" path="res://entities/environment/pole.tscn" id="5_hjcgx"]
+[ext_resource type="PackedScene" uid="uid://6ftxbilt48tx" path="res://scenes/game_over_screen.tscn" id="3_4tslq"]
+[ext_resource type="PackedScene" path="res://entities/environment/pole.tscn" id="5_hjcgx"]
 [ext_resource type="PackedScene" uid="uid://cn8sy16pws6k6" path="res://entities/enemies/enemy_spawner.tscn" id="5_nba2o"]
 [ext_resource type="AudioStream" uid="uid://s1413a8bpgso" path="res://assets/audio/music/taratata-6264.mp3" id="6_hv086"]
 
@@ -18,6 +19,7 @@ y_sort_enabled = true
 position = Vector2(-1946, -1132)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="HUD" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("player")]
 layout_mode = 3
@@ -38,8 +40,13 @@ offset_bottom = 38.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_d2ps3")
 value = 100.0
 
-[node name="Player" parent="." instance=ExtResource("1_8t4je")]
+[node name="GameOverScreen" parent="CanvasLayer" instance=ExtResource("3_4tslq")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Player" parent="." node_paths=PackedStringArray("game_over_screen") instance=ExtResource("1_8t4je")]
 position = Vector2(611, 301)
+game_over_screen = NodePath("../CanvasLayer/GameOverScreen")
 
 [node name="Obstacle" parent="." instance=ExtResource("3_1rbtv")]
 position = Vector2(-677, 241)

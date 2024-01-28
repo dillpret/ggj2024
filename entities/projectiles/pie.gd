@@ -31,7 +31,8 @@ func _on_body_entered(body):
 	if body.has_method("take_hit"):
 		body.take_hit(damage)
 		
-		apply_camera_shake()
+		if body.name == "Player":
+			apply_camera_shake()
 		
 		const SPLAT = preload("res://entities/projectiles/splat.tscn")
 		var new_splat = SPLAT.instantiate()

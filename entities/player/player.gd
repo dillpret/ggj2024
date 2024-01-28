@@ -1,5 +1,7 @@
 extends CharacterBase
 
+@export var game_over_screen: Control
+
 func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * move_speed
@@ -12,7 +14,9 @@ func _physics_process(_delta):
 		
 		
 func _on_die():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	game_over_screen.visible = true
+	await get_tree().create_timer(0.5).timeout
+	get_tree().paused = true
 
 
 func _process(_delta):
