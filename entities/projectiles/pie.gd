@@ -31,6 +31,8 @@ func _on_body_entered(body):
 	if body.has_method("take_hit"):
 		body.take_hit(damage)
 		
+		print(body.name)
+		
 		if body.name == "Player":
 			apply_camera_shake()
 		

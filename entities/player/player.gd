@@ -1,5 +1,7 @@
 extends CharacterBase
 
+var score: int = 0
+
 @export var game_over_screen: Control
 
 func _physics_process(_delta):
@@ -14,8 +16,9 @@ func _physics_process(_delta):
 		
 		
 func _on_die():
-	game_over_screen.visible = true
 	await get_tree().create_timer(0.5).timeout
+	game_over_screen.visible = true
+	game_over_screen.get_node("%Score").text = "Score: " + str(score)
 	get_tree().paused = true
 
 

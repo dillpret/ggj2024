@@ -20,8 +20,9 @@ func _physics_process(_delta):
 		
 func finished_falling_down():
 	print("finished falling down!")
+	player.score += 1
+	print("score is " + str(player.score))
 	queue_free()
-
 
 func _process(_delta):
 	super._process(_delta)
