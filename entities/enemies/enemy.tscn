@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5bcaltfxogjd"]
+[gd_scene load_steps=7 format=3 uid="uid://b5bcaltfxogjd"]
 
 [ext_resource type="Script" path="res://entities/enemies/enemy.gd" id="1_ww14u"]
 [ext_resource type="PackedScene" uid="uid://dwy3ddk1xgn6a" path="res://entities/projectiles/enemy_pie.tscn" id="2_51ydm"]
 [ext_resource type="PackedScene" uid="uid://h6k5bfdxxujx" path="res://entities/enemies/enemy_visuals.tscn" id="3_avvn2"]
 [ext_resource type="Texture2D" uid="uid://dedrxk5fs2nbe" path="res://assets/sprites/enemies/enemy.png" id="3_tb88a"]
-[ext_resource type="AudioStream" uid="uid://3wj5m7c3att6" path="res://assets/audio/sfx/cartoon-splat-6086.mp3" id="5_gwglk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehv7d"]
 radius = 20.025
@@ -44,8 +43,3 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ThrowingArea"]
 shape = SubResource("CircleShape2D_cmyx1")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_gwglk")
-volume_db = -20.0
-bus = &"SFX"

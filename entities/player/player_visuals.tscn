@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0ajvyjpjnown"]
+[gd_scene load_steps=9 format=3 uid="uid://b0ajvyjpjnown"]
 
 [ext_resource type="Texture2D" uid="uid://b6pt5sc0awaow" path="res://assets/sprites/player/player.png" id="1_h7eis"]
 [ext_resource type="Script" path="res://entities/player/player_visuals.gd" id="1_p0f7t"]
+[ext_resource type="Animation" uid="uid://dflkwey0g5jh0" path="res://assets/sprites/enemies/fall_down.res" id="2_30cd6"]
 
 [sub_resource type="Animation" id="Animation_wj3bp"]
 length = 0.001
@@ -90,6 +91,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tjj3t"]
 _data = {
 "RESET": SubResource("Animation_wj3bp"),
+"fall_down": ExtResource("2_30cd6"),
 "idle": SubResource("Animation_sqxth"),
 "run": SubResource("Animation_a7b5d")
 }

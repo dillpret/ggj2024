@@ -33,7 +33,10 @@ func _on_body_entered(body):
 		
 		apply_camera_shake()
 		
-		
+		const SPLAT = preload("res://entities/projectiles/splat.tscn")
+		var new_splat = SPLAT.instantiate()
+		get_parent().add_child(new_splat)
+		new_splat.global_position = global_position
 
 	queue_free()
 
