@@ -117,3 +117,5 @@ libraries = {
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vgq1d")
 frame_progress = 0.579847
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

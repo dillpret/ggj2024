@@ -17,6 +17,10 @@ func _physics_process(_delta):
 		velocity = direction * move_speed
 		move_and_slide()
 		%EnemyVisuals.play_run_animation()
+		
+func finished_falling_down():
+	print("finished falling down!")
+	queue_free()
 
 
 func _process(_delta):

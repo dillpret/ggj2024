@@ -33,7 +33,6 @@ func throw_at(target: Vector2):
 	
 func take_hit(damage: float):
 	health -= damage
-	print(health)
 
 func _process(delta):
 	if current_throw_cooldown > 0:
